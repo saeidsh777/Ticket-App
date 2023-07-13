@@ -1,5 +1,6 @@
 import React from "react";
 import "./Ticket.css";
+import { BiSolidPlaneTakeOff } from "react-icons/bi";
 
 export default class Ticket extends React.Component {
   constructor(props) {
@@ -28,7 +29,6 @@ export default class Ticket extends React.Component {
         <div className="col-md-6 box">
           <input className="fnameInput" placeholder="First Name" />
         </div>
-
         <div className="col-md-6 box">
           <input className="lnameInput" placeholder="Last Name" />
         </div>
@@ -43,7 +43,8 @@ export default class Ticket extends React.Component {
             className="countrySelect"
             onChange={(e) => this.selectCountry(e)}
           >
-            <option value="-1">Please Select ...</option>
+            <option value="-1">Please select a country</option>
+
             <option className="option" value="Iran">
               Iran
             </option>
@@ -55,6 +56,7 @@ export default class Ticket extends React.Component {
             </option>
           </select>
         </div>
+        ّّ
         <div className="col-md-6 box">
           <select className="citySelect">
             {this.state.mainCountryCities.length > 0 ? (
