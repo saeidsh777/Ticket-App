@@ -19,7 +19,7 @@ export default class Ticket extends React.Component {
   selectCountry(e) {
     let inputValue = e.target.value;
     let objSelect = this.state.countriesData[inputValue];
-    this.setState({ mainCountryCities: [...objSelect] });
+    this.setState({ mainCountryCities: objSelect });
   }
 
   render() {
