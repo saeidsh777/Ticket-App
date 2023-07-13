@@ -19,7 +19,7 @@ export default class Ticket extends React.Component {
   selectCountry(e) {
     let inputValue = e.target.value;
     let objSelect = this.state.countriesData[inputValue];
-    this.setState({ mainCountryCities: objSelect });
+    this.setState({ mainCountryCities: [...objSelect] });
   }
 
   render() {
@@ -58,8 +58,8 @@ export default class Ticket extends React.Component {
         <div className="col-md-6 box">
           <select className="citySelect">
             {this.state.mainCountryCities.length > 0 ? (
-              this.state.mainCountryCities.map((city) => (
-                <option value={city}>{city}</option>
+              this.state.mainCountryCities.map((country) => (
+                <option value={country}>{country}</option>
               ))
             ) : (
               <option value="-1">Please Select City</option>
