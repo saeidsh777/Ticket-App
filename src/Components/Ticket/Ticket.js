@@ -58,8 +58,8 @@ export default class Ticket extends React.Component {
         <div className="col-md-6 box">
           <select className="citySelect">
             {this.state.mainCountryCities.length > 0 ? (
-              this.state.mainCountryCities.map((country) => (
-                <option value={country}>{country}</option>
+              this.state.mainCountryCities.map((city) => (
+                <option value={city}>{city}</option>
               ))
             ) : (
               <option value="-1">Please Select City</option>
